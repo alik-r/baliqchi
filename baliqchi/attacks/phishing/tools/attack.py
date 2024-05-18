@@ -11,7 +11,7 @@ def initialize_attack(phishing_id: str):
 
     def send_phishing(target: Target):
         target_number: str = target.phone_number
-        final_url: str = f"{url}{target.id}"
+        final_url: str = f"http://localhost:8000/test/phishing-page/{url}{target.id}"
         final_body: str = body.replace("{url}", final_url)
 
         send_msg(target=target_number, body=final_body)

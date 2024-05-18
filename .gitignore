@@ -9,3 +9,4 @@ venv/
 
 **staticfiles**
 baliqchi/db.sqlite3
+baliqchi/attacks/phishing/templates/phishing/
