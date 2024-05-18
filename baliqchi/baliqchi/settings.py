@@ -12,15 +12,27 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+from decouple import config
+
+from twilio.rest import Client
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+config.search_path = BASE_DIR
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-)q5*^8yo)-hf_2glfl8ke^4@ni=166drz%e#n$xqs&abdjfqwh"
+SECRET_KEY: str = config("SECRET_KEY")
+
+# Twilio SMS
+ACCOUNT_SID: str = config("account_sid")
+AUTH_TOKEN: str = config("auth_token")
+twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
+TWILIO_PHONE_NUMBER = config("phone_number")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
