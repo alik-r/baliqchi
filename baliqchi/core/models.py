@@ -27,7 +27,6 @@ class BaseAttack(BaseModel):
     sent_time = models.DateTimeField(null=True, blank=True)
     status = models.CharField(max_length=50, choices=STATUSES, default='pending')
 
-    # targets = models
 
     def __str__(self):
         return self.title
