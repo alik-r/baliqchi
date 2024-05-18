@@ -1,6 +1,6 @@
 from django.db import models
 
-from baliqchi.attacks import BaseAttack
+from core.models import BaseAttack
 
 
 class Phishing(BaseAttack):

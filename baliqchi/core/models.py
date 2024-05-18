@@ -1,8 +1,9 @@
+from django.db import models
 from uuid import uuid4
 
-from django.db import models
-
-from baliqchi.attacks import ATTACKS
+ATTACKS = (
+    ("phishing", "Phishing"),
+)
 
 
 class BaseModel(models.Model):
@@ -13,6 +14,23 @@ class BaseModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+class BaseAttack(BaseModel):
+    STATUSES = (
+        ('pending', 'Pending'),
+        ('sent', 'Sent'),
+        ('completed', 'Completed'),
+    )
+    title = models.CharField(max_length=255)
+    scheduled_time = models.DateTimeField()
+    sent_time = models.DateTimeField(null=True, blank=True)
+    status = models.CharField(max_length=50, choices=STATUSES, default='pending')
+
+    # targets = models
+
+    def __str__(self):
+        return self.title
 
 
 class Target(BaseModel):
@@ -32,6 +50,6 @@ class Incident(BaseModel):
         related_name="incidents",
         verbose_name="Incidents",
         on_delete=models.SET_NULL,
+        null=True,
     )
     attack_type = models.CharField(max_length=255, choices=ATTACKS, default=None)
-    
