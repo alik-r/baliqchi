@@ -10,6 +10,8 @@ services:
       - "8000:8000"
     environment:
       - DJANGO_SETTINGS_MODULE=baliqchi.settings
+    env_file:
+      - .env
 
   prometheus:
     image: prom/prometheus
