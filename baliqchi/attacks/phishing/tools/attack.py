@@ -7,7 +7,7 @@ from core.models import Target
 def initialize_attack(phishing_id: str):
     phishing_model: Phishing = get_object_or_404(Phishing, pk=phishing_id)
     body: str = phishing_model.message
-    url: str = f"{(url := phishing_model.url)}{("/" if url[-1] != "/" else "")}?q="
+    url: str = f"{(url := phishing_model.url)}{('/' if url[-1] != '/' else '')}?q="
 
     def send_phishing(target: Target):
         target_number: str = target.phone_number
