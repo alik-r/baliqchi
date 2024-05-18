@@ -2,10 +2,10 @@ groups:
 - name: incidents
   rules:
   - alert: IncidentCallbackCalled
-    expr: django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"} > 1
+    expr: django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"} > 0
     for: 5m
     labels:
       severity: critical
     annotations:
       summary: "Incident callback called"
-      description: "The incident_callback view has been called {{ $value }} times."
+      description: "The incident_callback view has been called."
