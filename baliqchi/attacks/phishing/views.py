@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def send_msg(request):
+    # from baliqchi.settings import twilio_client, TWILIO_PHONE_NUMBER
+
+    # message = twilio_client.messages \
+    #     .create(
+    #         body="Salam A kishi",
+    #         from_=TWILIO_PHONE_NUMBER,
+    #         to="+994XXXYYZZ"
+    #     )
+
+    return HttpResponse("Success")
