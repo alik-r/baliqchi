@@ -55,6 +55,8 @@ LOCAL_APPS = [
 THIRD_PARTY_APPS = [
     "django_prometheus",
     "whitenoise.runserver_nostatic",
+    "rest_framework",
+    "drf_yasg",
 ]
 
 INSTALLED_APPS = (
@@ -156,7 +158,7 @@ STORAGES = {
     "default": {
         "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
-    "staticfiles": {  
+    "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
