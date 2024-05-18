@@ -1,6 +1,7 @@
 from django.urls import path
-import attacks.phishing.views as views
+from attacks.phishing.api import *
 
 urlpatterns = [
-    path("send-sms/", views.send_msg, name="send-sms")
+    path("test/", test_view, name="test-view"),
+    path("make-attack", AttackAPIView.as_view(), name="make-attack")
 ]

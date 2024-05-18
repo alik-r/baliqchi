@@ -28,7 +28,6 @@ class BaseAttack(BaseModel):
     scheduled_time = models.DateTimeField()
     status = models.CharField(max_length=50, choices=STATUSES, default='pending')
 
-
     def __str__(self):
         return self.title
 
