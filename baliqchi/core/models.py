@@ -1,6 +1,8 @@
 from django.db import models
 from uuid import uuid4
 
+from django_prometheus.models import ExportModelOperationsMixin
+
 ATTACKS = (
     ("phishing", "Phishing"),
 )
@@ -24,7 +26,6 @@ class BaseAttack(BaseModel):
     )
     title = models.CharField(max_length=255)
     scheduled_time = models.DateTimeField()
-    sent_time = models.DateTimeField(null=True, blank=True)
     status = models.CharField(max_length=50, choices=STATUSES, default='pending')
 
 
@@ -32,10 +33,8 @@ class BaseAttack(BaseModel):
         return self.title
 
 
-class Target(BaseModel):
+class Target(ExportModelOperationsMixin('target'), BaseModel):
     phone_number = models.CharField(max_length=15)
-    clicked = models.BooleanField(default=False)
-    click_timestamp = models.DateTimeField(null=True, blank=True)
     device_info = models.CharField(max_length=255, null=True, blank=True)
     # organization = models.CharField(max_length=255, null=True, blank=True)  # Organization
 
@@ -43,11 +42,11 @@ class Target(BaseModel):
         return self.phone_number
 
 
-class Incident(BaseModel):
+class Incident(ExportModelOperationsMixin('incident'), BaseModel):
     target = models.ForeignKey(
         "core.Target",
         related_name="incidents",
-        verbose_name="Incidents",
+        verbose_name="Target",
         on_delete=models.SET_NULL,
         null=True,
     )

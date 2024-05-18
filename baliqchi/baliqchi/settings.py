@@ -35,6 +35,10 @@ LOCAL_APPS = [
     "core",
 ]
 
+THIRD_PARTY_APPS = [
+    "django_prometheus",
+]
+
 INSTALLED_APPS = (
     [
         "django.contrib.admin",
@@ -45,9 +49,11 @@ INSTALLED_APPS = (
         "django.contrib.staticfiles",
     ]
     + LOCAL_APPS
+    + THIRD_PARTY_APPS
 )
 
 MIDDLEWARE = [
+    "django_prometheus.middleware.PrometheusBeforeMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -55,6 +61,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_prometheus.middleware.PrometheusAfterMiddleware",
 ]
 
 ROOT_URLCONF = "baliqchi.urls"
@@ -83,7 +90,7 @@ WSGI_APPLICATION = "baliqchi.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django_prometheus.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
