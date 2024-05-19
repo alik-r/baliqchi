@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Target, Incident
+from core.models import Target, Incident
 
 # Register your models here.
 admin.site.site_header = "Baliqchi Admin"
