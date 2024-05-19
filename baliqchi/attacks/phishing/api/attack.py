@@ -54,9 +54,3 @@ class AttackAPIView(APIView):
                 return response.InternalServerError()
 
         return response.BadRequest(serializer.errors)
-
-
-def test_view(request):
-    # get_choices()
-
-    return HttpResponse("Success")

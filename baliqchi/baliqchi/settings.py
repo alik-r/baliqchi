@@ -20,12 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 config.search_path = BASE_DIR
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY: str = config("SECRET_KEY")
+
+BASE_URL: str = config("BASE_URL")
 
 # Twilio SMS
 ACCOUNT_SID: str = config("account_sid")
@@ -45,7 +43,6 @@ ALLOWED_HOSTS = [
 
 
 # Application definition
-
 LOCAL_APPS = [
     "attacks.phishing",
     "core",
