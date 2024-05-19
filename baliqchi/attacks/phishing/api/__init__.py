@@ -1,10 +1,10 @@
 from .attack import AttackAPIView, test_view
 from .phishing_choices import PhishingChoicesAPIView
-from .phishing_page import render_html
+from .phishing_page import PhishingPageAPIView
 
 __all__ = (
     "AttackAPIView",
     "test_view",
     "PhishingChoicesAPIView",
-    "render_html",
+    "PhishingPageAPIView",
 )
