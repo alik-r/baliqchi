@@ -15,6 +15,10 @@ from core.tools import response
 
 
 class AttackAPIView(APIView):
+    """
+    API endpoint for conducting phishing attacks on targets.
+    """
+
     serializer_class = PhishingAttackSerializer
     permission_classes = (permissions.IsAuthenticated,)
 

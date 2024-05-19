@@ -1,3 +1,6 @@
+"""
+Just Response classes
+"""
 from django import http
 
 from rest_framework.response import Response

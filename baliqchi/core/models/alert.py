@@ -3,8 +3,10 @@ from datetime import datetime
 
 from .incident import Incident
 
+
 def generate_timestamp():
     return int(datetime.now().timestamp() * 1000)
+
 
 class Alert(models.Model):
     STATUS_CHOICES = [

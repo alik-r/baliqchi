@@ -1,0 +1,69 @@
+attacks.phishing.migrations package
+===================================
+
+Submodules
+----------
+
+attacks.phishing.migrations.0001\_initial module
+------------------------------------------------
+
+.. automodule:: attacks.phishing.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+attacks.phishing.migrations.0002\_phishing\_html module
+-------------------------------------------------------
+
+.. automodule:: attacks.phishing.migrations.0002_phishing_html
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+attacks.phishing.migrations.0003\_alter\_phishing\_html module
+--------------------------------------------------------------
+
+.. automodule:: attacks.phishing.migrations.0003_alter_phishing_html
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+attacks.phishing.migrations.0004\_alter\_phishing\_html module
+--------------------------------------------------------------
+
+.. automodule:: attacks.phishing.migrations.0004_alter_phishing_html
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+attacks.phishing.migrations.0005\_alter\_phishing\_html module
+--------------------------------------------------------------
+
+.. automodule:: attacks.phishing.migrations.0005_alter_phishing_html
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+attacks.phishing.migrations.0006\_alter\_phishing\_html\_alter\_phishing\_url module
+------------------------------------------------------------------------------------
+
+.. automodule:: attacks.phishing.migrations.0006_alter_phishing_html_alter_phishing_url
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+attacks.phishing.migrations.0007\_alter\_phishing\_html module
+--------------------------------------------------------------
+
+.. automodule:: attacks.phishing.migrations.0007_alter_phishing_html
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: attacks.phishing.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

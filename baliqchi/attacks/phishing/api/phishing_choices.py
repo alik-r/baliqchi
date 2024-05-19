@@ -10,6 +10,9 @@ from core.tools import response
 
 
 class PhishingChoicesAPIView(APIView):
+    """
+    API endpoint to retrieve the available phishing methods.
+    """
     permission_classes = (AllowAny,)
 
     @swagger_auto_schema(

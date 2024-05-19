@@ -10,6 +10,18 @@ ATTACKS = (
 
 
 class Incident(ExportModelOperationsMixin('incident'), BaseModel):
+    """
+    Model representing an incident.
+
+    Inherits from:
+    - ExportModelOperationsMixin: Mixin for exporting model operations to Prometheus.
+    - BaseModel: Base model for all models in the application.
+
+    Attributes:
+    - target: Foreign key linking to the Target model.
+    - attack_type: Char field for the type of attack associated with the incident.
+    - acknowledged: Boolean field indicating whether the incident has been acknowledged.
+    """
     target = models.ForeignKey(
         "core.Target",
         related_name="incidents",

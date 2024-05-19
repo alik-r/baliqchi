@@ -12,6 +12,18 @@ logger = logging.getLogger(__name__)
 
 @csrf_exempt
 def incident_callback(request):
+    """
+    Callback function for recording incidents.
+
+    Receives incident data via POST request, logs the incident,
+    and returns a success response.
+
+    Parameters:
+    - request: HTTP request object.
+
+    Returns:
+    - JsonResponse: Response indicating the status of the incident recording.
+    """
     if request.method != 'POST':
         return JsonResponse({'error': 'Invalid request method'}, status=405)
     
@@ -27,6 +39,18 @@ def incident_callback(request):
 
 @csrf_exempt
 def webhook_receiver(request):
+    """
+    Receiver function for processing webhook alerts.
+
+    Receives alert data via POST request, processes the alerts,
+    logs the data, and returns a success response.
+
+    Parameters:
+    - request: HTTP request object.
+
+    Returns:
+    - JsonResponse: Response indicating the status of the alert processing.
+    """
     if request.method == 'POST':
         data = json.loads(request.body)
         alert_str = json.dumps(data, indent=None)

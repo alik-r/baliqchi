@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>core.tools package &mdash; baliqchi  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="manage module" href="manage.html" />
+    <link rel="prev" title="core.repositories package" href="core.repositories.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            baliqchi
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">baliqchi</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="attacks.html">attacks package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="baliqchi.html">baliqchi package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="core.html">core package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="core.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="core.models.html">core.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="core.repositories.html">core.repositories package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">core.tools package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-core.admin">core.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-core.apps">core.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-core.signals">core.signals module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-core.tests">core.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-core.views">core.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.html#module-core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">baliqchi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">baliqchi</a></li>
+          <li class="breadcrumb-item"><a href="core.html">core package</a></li>
+      <li class="breadcrumb-item active">core.tools package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/core.tools.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="core-tools-package">
+<h1>core.tools package<a class="headerlink" href="#core-tools-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-core.tools.base_model">
+<span id="core-tools-base-model-module"></span><h2>core.tools.base_model module<a class="headerlink" href="#module-core.tools.base_model" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.base_model.</span></span><span class="sig-name descname"><span class="pre">BaseModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_model.html#BaseModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.base_model.BaseModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Base model for all models in the application.</p>
+<p>Attributes:
+- id: UUID field for the primary key.
+- created_at: DateTime field for the creation timestamp.
+- updated_at: DateTime field for the last update timestamp.
+- is_deleted: Boolean field indicating whether the model is deleted.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/core/tools/base_model.html#BaseModel.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.base_model.BaseModel.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.Meta.abstract">
+<span class="sig-name descname"><span class="pre">abstract</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#core.tools.base_model.BaseModel.Meta.abstract" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#core.tools.base_model.BaseModel.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.base_model.BaseModel.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.base_model.BaseModel.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.base_model.BaseModel.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.base_model.BaseModel.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.tools.base_model.BaseModel.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.is_deleted">
+<span class="sig-name descname"><span class="pre">is_deleted</span></span><a class="headerlink" href="#core.tools.base_model.BaseModel.is_deleted" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.base_model.BaseModel.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#core.tools.base_model.BaseModel.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-core.tools.base_repository">
+<span id="core-tools-base-repository-module"></span><h2>core.tools.base_repository module<a class="headerlink" href="#module-core.tools.base_repository" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.base_repository.BaseRepository">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.base_repository.</span></span><span class="sig-name descname"><span class="pre">BaseRepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.base_repository.BaseRepository" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstract base class for repository implementations.</p>
+<p>Provides common CRUD methods for interacting with models.</p>
+<p>Attributes:
+- model: Model class associated with the repository.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_repository.BaseRepository.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.base_repository.BaseRepository.create" title="Link to this definition"></a></dt>
+<dd><p>Creates a new object in the database with the provided data.</p>
+<p>Parameters:
+- kwargs: Data for creating the object.</p>
+<p>Returns:
+- Object: Created object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_repository.BaseRepository.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.base_repository.BaseRepository.filter" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of objects from the database based on the provided filter parameters.</p>
+<p>Parameters:
+- kwargs: Filter parameters to query the objects.</p>
+<p>Returns:
+- QuerySet: QuerySet containing the retrieved objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_repository.BaseRepository.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.base_repository.BaseRepository.get" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a single object from the database based on the provided filter parameters.</p>
+<p>Parameters:
+- kwargs: Filter parameters to query the object.</p>
+<p>Returns:
+- Object: Retrieved object from the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.base_repository.BaseRepository.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.base_repository.BaseRepository.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the specified object with the provided data.</p>
+<p>Parameters:
+- instance: Object to be updated.
+- kwargs: Data for updating the object.</p>
+<p>Returns:
+- Object: Updated object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-core.tools.response">
+<span id="core-tools-response-module"></span><h2>core.tools.response module<a class="headerlink" href="#module-core.tools.response" title="Link to this heading"></a></h2>
+<p>Just Response classes</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Accepted">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Accepted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Accepted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Accepted" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>202 Accepted
+Must be used to indicate successful start of an asynchronous action.
+A 202 response indicates that the client’s request will be handled
+asynchronously. This response status code tells the client that the request
+appears valid, but it still may have problems once it’s finally processed.
+A 202 response is typically used for actions that take a long while to
+process.
+Controller resources may send 202 responses, but other resource types
+should not.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Accepted.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">202</span></em><a class="headerlink" href="#core.tools.response.Accepted.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.BadRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">BadRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#BadRequest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.BadRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>400 Bad Request
+May be used to indicate nonspecific failure.
+400 is the generic client-side error status, used when no other 4xx error
+code is appropriate.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.BadRequest.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">400</span></em><a class="headerlink" href="#core.tools.response.BadRequest.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Conflict">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Conflict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Conflict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Conflict" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>409 Conflict
+Should be used to indicate a violation of the resource state.
+The 409 error response tells the client that they tried to put the REST
+API’s resources into an impossible or inconsistent state. For example, a
+REST API may return this response code when a client tries to delete a
+non-empty store resource.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Conflict.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">409</span></em><a class="headerlink" href="#core.tools.response.Conflict.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Created">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Created</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Created"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Created" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>201 Created
+Must be used to indicate successful resource creation.
+A REST API responds with the 201 status code whenever a collection creates,
+or a store adds, a new resource at the client’s request. There may also be
+times when a new resource is created as a result of some controller action,
+in which case 201 would also be an appropriate response.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Created.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">201</span></em><a class="headerlink" href="#core.tools.response.Created.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Forbidden">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Forbidden</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Forbidden"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Forbidden" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>403 Forbidden
+Should be used to forbid access regardless of authorization state.
+A 403 error response indicates that the client’s request is formed
+correctly, but the REST API refuses to honor it. A 403 response is not a
+case of insufficient client credentials; that would be 401 (“Unauthorized”).
+REST APIs use 403 to enforce application-level permissions. For example, a
+client may be authorized to interact with some, but not all of a REST API’s
+resources. If the client attempts a resource interaction that is outside of
+its permitted scope, the REST API should respond with 403.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Forbidden.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">403</span></em><a class="headerlink" href="#core.tools.response.Forbidden.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Found">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Found</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redirect_to</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Found"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Found" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpResponseRedirect</span></code></p>
+<p>302 Found
+Should not be used.
+The intended semantics of the 302 response code have been misunderstood
+by programmers and incorrectly implemented in programs since version 1.0
+of the HTTP protocol.
+The confusion centers on whether it is appropriate for a client to always
+automatically issue a follow-up GET request to the URI in response’s
+Location header, regardless of the original request’s method. For the
+record, the intent of 302 is that this automatic redirect behavior only
+applies if the client’s original request used either the GET or HEAD
+method.
+To clear things up, HTTP 1.1 introduced status codes 303 (“See Other”)
+and 307 (“Temporary Redirect”), either of which should be used
+instead of 302.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Found.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">302</span></em><a class="headerlink" href="#core.tools.response.Found.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Gone">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Gone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Gone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Gone" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>410 Gone
+Indicates that the resource requested is no longer available and will not
+be available again.
+This should be used when a resource has been intentionally removed and the
+resource should be purged. Upon receiving a 410 status code, the client
+should not request the resource again in the future.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Gone.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">410</span></em><a class="headerlink" href="#core.tools.response.Gone.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.InternalServerError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">InternalServerError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#InternalServerError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.InternalServerError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>500 Internal Server Error
+Should be used to indicate API malfunction.
+500 is the generic REST API error response. Most web frameworks
+automatically respond with this response status code whenever they execute
+some request handler code that raises an exception.
+A 500 error is never the client’s fault and therefore it is purposeable for
+the client to retry the exact same request that triggered this response,
+and hope to get a different response.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.InternalServerError.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">500</span></em><a class="headerlink" href="#core.tools.response.InternalServerError.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.MethodNotAllowed">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">MethodNotAllowed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#MethodNotAllowed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.MethodNotAllowed" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>405 Method Not Allowed
+Must be used when the HTTP method is not supported.
+The API responds with a 405 error to indicate that the client tried to use
+an HTTP method that the resource does not allow. For instance, a read-only
+resource could support only GET and HEAD, while a controller resource might
+allow GET and POST, but not PUT or DELETE.
+A 405 response must include the Allow header, which lists the HTTP methods
+that the resource supports. For example:</p>
+<blockquote>
+<div><p>Allow: GET, POST</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.MethodNotAllowed.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">405</span></em><a class="headerlink" href="#core.tools.response.MethodNotAllowed.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.MovedPermanently">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">MovedPermanently</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redirect_to</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#MovedPermanently"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.MovedPermanently" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpResponsePermanentRedirect</span></code></p>
+<p>301 Moved Permanently
+Should be used to relocate resources.
+The 301 status code indicates that the REST API’s resource model has been
+significantly redesigned and a new permanent URI has been assigned to the
+client’s requested resource. The REST API should specify the new URI in
+the response’s Location header.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.MovedPermanently.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">301</span></em><a class="headerlink" href="#core.tools.response.MovedPermanently.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.MultipleChoices">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">MultipleChoices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#MultipleChoices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.MultipleChoices" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>300 Multiple Choices
+Indicates multiple options for the resource that the client may follow.
+It could be used to present different format options for video, list files
+with different extensions, or word sense disambiguation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.MultipleChoices.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">300</span></em><a class="headerlink" href="#core.tools.response.MultipleChoices.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.NoContent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">NoContent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#NoContent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.NoContent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>204 No Content
+Should be used when the response body is intentionally empty.
+The 204 status code is usually sent out in response to a PUT, POST, or
+DELETE request, when the REST API declines to send back any status message
+or representation in the response message’s body. An API may also send 204
+in conjunction with a GET request to indicate that the requested resource
+exists, but has no state representation to include in the body.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.NoContent.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">204</span></em><a class="headerlink" href="#core.tools.response.NoContent.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.NotAcceptable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">NotAcceptable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#NotAcceptable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.NotAcceptable" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>406 Not Acceptable
+Must be used when the requested media type cannot be served.
+The 406 error response indicates that the API is not able to generate any
+of the client’s preferred media types, as indicated by the Accept request
+header. For example, a client request for data formatted as application/xml
+will receive a 406 response if the API is only willing to format data as
+application/json.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.NotAcceptable.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">406</span></em><a class="headerlink" href="#core.tools.response.NotAcceptable.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.NotFound">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">NotFound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#NotFound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.NotFound" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>404 Not Found
+Must be used when a client’s URI cannot be mapped to a resource.
+The 404 error status code indicates that the REST API can’t map the
+client’s URI to a resource.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.NotFound.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">404</span></em><a class="headerlink" href="#core.tools.response.NotFound.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.NotImplemented">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">NotImplemented</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#NotImplemented"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.NotImplemented" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>501 Not Implemented
+The server either does not recognise the request method, or it lacks the
+ability to fulfill the request.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.NotImplemented.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">501</span></em><a class="headerlink" href="#core.tools.response.NotImplemented.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.NotModified">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">NotModified</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#NotModified"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.NotModified" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HttpResponseNotModified</span></code></p>
+<p>304 Not Modified
+Should be used to preserve bandwith.
+This status code is similar to 204 (“No Content”) in that the response body
+must be empty. The key distinction is that 204 is used when there is
+nothing to send in the body, whereas 304 is used when there is state
+information associated with a resource but the client already has the most
+recent version of the representation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.NotModified.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">304</span></em><a class="headerlink" href="#core.tools.response.NotModified.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Ok">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Ok</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Ok"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Ok" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>200 OK
+Should be used to indicate nonspecific success. Must not be used to
+communicate errors in the response body.
+In most cases, 200 is the code the client hopes to see. It indicates that
+the REST API successfully carried out whatever action the client requested,
+and that no more specific code in the 2xx series is appropriate. Unlike
+the 204 status code, a 200 response should include a response body.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Ok.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">200</span></em><a class="headerlink" href="#core.tools.response.Ok.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.PreconditionFailed">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">PreconditionFailed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#PreconditionFailed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.PreconditionFailed" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>412 Precondition Failed
+Should be used to support conditional operations.
+The 412 error response indicates that the client specified one or more
+preconditions in its request headers, effectively telling the REST API to
+carry out its request only if certain conditions were met.
+A 412 response indicates that those conditions were not met, so instead of
+carrying out the request, the API sends this status code.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.PreconditionFailed.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">412</span></em><a class="headerlink" href="#core.tools.response.PreconditionFailed.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.SeeOther">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">SeeOther</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#SeeOther"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.SeeOther" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>303 See Other
+Should be used to refer the client to a different URI.
+A 303 response indicates that a controller resource has finished its work,
+but instead of sending a potentially unwanted response body, it sends the
+client the URI of a response resource. This can be the URI of a temporary
+status message, or the URI to some already existing, more permanent,
+resource.
+Generally speaking, the 303 status code allows a REST API to send a
+reference to a resource without forcing the client to download its state.
+Instead, the client may send a GET request to the value of the Location
+header.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.SeeOther.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">303</span></em><a class="headerlink" href="#core.tools.response.SeeOther.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.TemporaryRedirect">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">TemporaryRedirect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#TemporaryRedirect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.TemporaryRedirect" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>307 Temporary Redirect
+Should be used to tell clients to resubmit the request to another URI.
+HTTP/1.1 introduced the 307 status code to reiterate the originally
+intended semantics of the 302 (“Found”) status code. A 307 response
+indicates that the REST API is not going to process the client’s request.
+Instead, the client should resubmit the request to the URI specified by
+the response message’s Location header.
+A REST API can use this status code to assign a temporary URI to the
+client’s requested resource. For example, a 307 response can be used to
+shift a client request over to another host.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.TemporaryRedirect.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">307</span></em><a class="headerlink" href="#core.tools.response.TemporaryRedirect.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.TooManyRequests">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">TooManyRequests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#TooManyRequests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.TooManyRequests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>429 Too Many Requests
+The user has sent too many requests in a given amount of time.
+Intended for use with rate limiting schemas.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.TooManyRequests.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">429</span></em><a class="headerlink" href="#core.tools.response.TooManyRequests.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.Unauthorized">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">Unauthorized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#Unauthorized"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.Unauthorized" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>401 Unauthorized
+Must be used when there is a problem with the client credentials.
+A 401 error response indicates that the client tried to operate on a
+protected resource without providing the proper authorization. It may have
+provided the wrong credentials or none at all.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.Unauthorized.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">401</span></em><a class="headerlink" href="#core.tools.response.Unauthorized.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.response.UnsupportedMediaType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.response.</span></span><span class="sig-name descname"><span class="pre">UnsupportedMediaType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/response.html#UnsupportedMediaType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.response.UnsupportedMediaType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#core.tools.Response" title="rest_framework.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+<p>415 Unsupported Media Type
+Must be used when the media type of a request’s payload cannot be processed.
+The 415 error response indicates that the API is not able to process the
+client’s supplied media type, as indicated by the Content-Type request
+header.
+For example, a client request including data formatted as application/xml
+will receive a 415 response if the API is only willing to process data
+formatted as application/json.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.response.UnsupportedMediaType.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">415</span></em><a class="headerlink" href="#core.tools.response.UnsupportedMediaType.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-core.tools">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-core.tools" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.BaseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.</span></span><span class="sig-name descname"><span class="pre">BaseModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_model.html#BaseModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.BaseModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Base model for all models in the application.</p>
+<p>Attributes:
+- id: UUID field for the primary key.
+- created_at: DateTime field for the creation timestamp.
+- updated_at: DateTime field for the last update timestamp.
+- is_deleted: Boolean field indicating whether the model is deleted.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.BaseModel.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/core/tools/base_model.html#BaseModel.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.BaseModel.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.BaseModel.Meta.abstract">
+<span class="sig-name descname"><span class="pre">abstract</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#core.tools.BaseModel.Meta.abstract" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.BaseModel.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#core.tools.BaseModel.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseModel.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.BaseModel.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseModel.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.BaseModel.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseModel.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.BaseModel.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseModel.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.tools.BaseModel.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.BaseModel.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#core.tools.BaseModel.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.BaseModel.is_deleted">
+<span class="sig-name descname"><span class="pre">is_deleted</span></span><a class="headerlink" href="#core.tools.BaseModel.is_deleted" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.tools.BaseModel.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#core.tools.BaseModel.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.BaseRepository">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.</span></span><span class="sig-name descname"><span class="pre">BaseRepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.BaseRepository" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstract base class for repository implementations.</p>
+<p>Provides common CRUD methods for interacting with models.</p>
+<p>Attributes:
+- model: Model class associated with the repository.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseRepository.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.BaseRepository.create" title="Link to this definition"></a></dt>
+<dd><p>Creates a new object in the database with the provided data.</p>
+<p>Parameters:
+- kwargs: Data for creating the object.</p>
+<p>Returns:
+- Object: Created object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseRepository.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.BaseRepository.filter" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of objects from the database based on the provided filter parameters.</p>
+<p>Parameters:
+- kwargs: Filter parameters to query the objects.</p>
+<p>Returns:
+- QuerySet: QuerySet containing the retrieved objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseRepository.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.BaseRepository.get" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a single object from the database based on the provided filter parameters.</p>
+<p>Parameters:
+- kwargs: Filter parameters to query the object.</p>
+<p>Returns:
+- Object: Retrieved object from the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.tools.BaseRepository.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/tools/base_repository.html#BaseRepository.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.BaseRepository.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the specified object with the provided data.</p>
+<p>Parameters:
+- instance: Object to be updated.
+- kwargs: Data for updating the object.</p>
+<p>Returns:
+- Object: Updated object.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.tools.Response">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.tools.</span></span><span class="sig-name descname"><span class="pre">Response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rest_framework/response.html#Response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#core.tools.Response" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleTemplateResponse</span></code></p>
+<p>An HttpResponse that allows its data to be rendered into
+arbitrary media types.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="core.tools.Response.rendered_content">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rendered_content</span></span><a class="headerlink" href="#core.tools.Response.rendered_content" title="Link to this definition"></a></dt>
+<dd><p>Return the freshly rendered content for the template and context
+described by the TemplateResponse.</p>
+<p>This <em>does not</em> set the final content of the response. To set the
+response content, you must either call render(), or set the
+content explicitly using the value of this property.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.tools.Response.status_text">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status_text</span></span><a class="headerlink" href="#core.tools.Response.status_text" title="Link to this definition"></a></dt>
+<dd><p>Returns reason text corresponding to our HTTP response status code.
+Provided for convenience.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="core.repositories.html" class="btn btn-neutral float-left" title="core.repositories package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="manage.html" class="btn btn-neutral float-right" title="manage module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Anonymous.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

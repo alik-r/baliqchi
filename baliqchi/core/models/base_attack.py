@@ -3,6 +3,15 @@ from core.tools import BaseModel
 
 
 class BaseAttack(BaseModel):
+    """
+    Base model for all attack types.
+
+    Attributes:
+    - STATUSES: Choices for the status of the attack.
+    - title: Char field for the title of the attack.
+    - scheduled_time: DateTime field for the scheduled time of the attack.
+    - status: Char field for the status of the attack.
+    """
     STATUSES = (
         ('pending', 'Pending'),
         ('sent', 'Sent'),

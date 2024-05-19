@@ -7,6 +7,20 @@ from core.models import Target
 
 
 def initialize_attack(phishing_id: str):
+    """
+    Function to initialize a phishing attack.
+
+    Retrieves the phishing model corresponding to the provided ID,
+    constructs the message body and URL, and sends the phishing message
+    to the target.
+
+    Parameters:
+    - phishing_id: ID of the phishing model.
+
+    Returns:
+    - Function: Function to send phishing message to a target.
+    """
+
     phishing_model: Phishing = get_object_or_404(Phishing, pk=phishing_id)
     body: str = phishing_model.message
     url: str = f"{(url := phishing_model.url)}{('/' if url[-1] != '/' else '')}"
@@ -23,6 +37,16 @@ def initialize_attack(phishing_id: str):
 
 
 def send_msg(target: str, body: str):
+    """
+    Function to send a message using Twilio.
+
+    Parameters:
+    - target: Phone number of the recipient.
+    - body: Body of the message.
+
+    Returns:
+    - None
+    """
     message = twilio_client.messages \
         .create(
             body=body,
