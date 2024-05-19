@@ -1,1 +1,133 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Attack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #responseMessage {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Attack Portal</h1>
+        <p>Choose a model to attack:</p>
+        <form id="attackForm">
+            {% csrf_token %}
+            <select id="modelSelect" name="phishing_model">
+                {% for model in choices %}
+                    <option value="{{ model.0 }}">{{ model.1 }}</option>
+                {% endfor %}
+            </select>
+            <button id="startAttackBtn" type="button">Start Attack</button>
+        </form>
+        <div id="responseMessage"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const startAttackBtn = document.getElementById("startAttackBtn");
+            const responseMessage = document.getElementById("responseMessage");
+
+            startAttackBtn.addEventListener("click", function() {
+                const modelId = document.getElementById("modelSelect").value;
+                const url = "{{ red_button }}/";
+
+                const formData = new FormData();
+                formData.append('phishing_model', modelId);
+
+                // Get CSRF token from the cookie
+                const csrftoken = getCookie('csrftoken');
+
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrftoken
+                    },
+                    body: formData
+                })
+                .then(response => response.json()) // Parse response as JSON
+                .then(data => {
+                    responseMessage.innerText = data["detail"];
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    responseMessage.innerText = 'An error occurred during the attack.';
+                });
+            });
+        });
+
+        // Function to get CSRF token from cookie
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+</body>
+</html>

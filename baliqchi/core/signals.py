@@ -5,6 +5,7 @@ import requests
 from core.models.alert import Alert
 from core.models.incident import Incident
 
+
 @receiver(post_save, sender=Incident)
 def incident_post_save(sender, instance, created, **kwargs):
     if created:

@@ -9,6 +9,7 @@ from core.models.alert import Alert
 
 logger = logging.getLogger(__name__)
 
+
 @csrf_exempt
 def incident_callback(request):
     if request.method != 'POST':
@@ -22,6 +23,7 @@ def incident_callback(request):
     except json.JSONDecodeError as e:
         logger.error(f"Error decoding incident data: {e}")
         return JsonResponse({'error': 'Error decoding incident data'}, status=400)
+
 
 @csrf_exempt
 def webhook_receiver(request):

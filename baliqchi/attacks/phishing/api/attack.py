@@ -2,7 +2,6 @@ import logging
 import traceback
 from typing import List
 
-from django.http import HttpResponse
 from django.shortcuts import get_list_or_404
 from rest_framework.views import APIView
 from rest_framework import permissions
@@ -38,10 +37,11 @@ class AttackAPIView(APIView):
                 targets: List[Target] | None = get_list_or_404(Target)
                 phishing_id: str = serializer.validated_data["phishing_model"]
                 results = list(map(initialize_attack(phishing_id=phishing_id), targets))
+                # result can be used in future for statististical purposes
 
                 return response.Ok(
                     {
-                        "data": "Attacks are being executed."
+                        "detail": "Attacks are being executed."
                     }
                 )
             except Exception as e:
