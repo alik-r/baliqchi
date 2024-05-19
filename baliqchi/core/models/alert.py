@@ -15,9 +15,9 @@ class Alert(models.Model):
     annotations = models.JSONField()
     starts_at = models.DateTimeField()
     generator_url = models.CharField(max_length=255)
-    fingerprint = models.CharField(max_length=255, unique=True)
+    fingerprint = models.CharField(max_length=255)
     timestamp = models.BigIntegerField(default=int(datetime.now().timestamp() * 1000))
     incident = models.OneToOneField(Incident, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return f"Alert with fingerprint {self.fingerprint} (status: {self.status})"
+        return f"Alert {self.fingerprint} {self.starts_at.isoformat()} ({self.status})"

@@ -3,9 +3,9 @@ groups:
   rules:
   - alert: IncidentCallbackCalled
     expr: |
-      (increase(django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"}[1m]) > 0) 
+      (increase(django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"}[2m]) > 0) 
       or 
-      (django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"} unless django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"} offset 1m)
+      (django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"} unless django_http_responses_total_by_status_view_method_total{instance="web:8000", job="django", method="POST", status="200", view="incident-callback"} offset 2m)
     for: 0s
     labels:
       severity: info

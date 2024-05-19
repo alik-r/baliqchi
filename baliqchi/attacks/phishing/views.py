@@ -11,18 +11,24 @@ logger = logging.getLogger(__name__)
 
 @csrf_exempt
 def incident_callback(request):
-    if request.method == 'POST':
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Invalid request method'}, status=405)
+    
+    try:
         incident_data = json.loads(request.body) if request.body else {}
         incident_str = json.dumps(incident_data, indent=None)
         logger.info(f"Incident recorded: {incident_str}")
         return JsonResponse({'status': 'Incident recorded.'}, status=200)
-    return JsonResponse({'error': 'Invalid request method'}, status=405)
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding incident data: {e}")
+        return JsonResponse({'error': 'Error decoding incident data'}, status=400)
 
 @csrf_exempt
 def webhook_receiver(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         alert_str = json.dumps(data, indent=None)
+        logger.info(f"Received alert data: {alert_str}")
 
         for alert_data in data.get('alerts', []):
             status = alert_data['status']
@@ -31,14 +37,14 @@ def webhook_receiver(request):
             starts_at = datetime.fromisoformat(alert_data['startsAt'].replace('Z', '+00:00'))
             generator_url = alert_data['generatorURL']
             fingerprint = alert_data['fingerprint']
-            
+
             alert, created = Alert.objects.get_or_create(
-                fingerprint=fingerprint,
+                starts_at=starts_at,
                 defaults={
                     'status': status,
                     'labels': labels,
                     'annotations': annotations,
-                    'starts_at': starts_at,
+                    'fingerprint': fingerprint,
                     'generator_url': generator_url,
                     'incident': Incident.objects.latest('created_at')
                 }
