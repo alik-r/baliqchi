@@ -53,6 +53,7 @@ THIRD_PARTY_APPS = [
     "whitenoise.runserver_nostatic",
     "rest_framework",
     "drf_yasg",
+    "import_export",
 ]
 
 INSTALLED_APPS = (

@@ -8,7 +8,7 @@ from core.tools import BaseModel
 class Target(ExportModelOperationsMixin('target'), BaseModel):
     phone_number = models.CharField(max_length=15)
     device_info = models.CharField(max_length=255, null=True, blank=True)
-    # organization = models.CharField(max_length=255, null=True, blank=True)  # Organization or user to whom targets belong
+    # organization = models.CharField(max_length=255, null=True, blank=True)  # Organization
 
     def __str__(self):
         return self.phone_number
