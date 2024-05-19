@@ -9,7 +9,7 @@ class BaseAttack(BaseModel):
         ('completed', 'Completed'),
     )
     title = models.CharField(max_length=255)
-    scheduled_time = models.DateTimeField()
+    scheduled_time = models.DateTimeField(null=True, blank=True)
     status = models.CharField(max_length=50, choices=STATUSES, default='pending')
 
     def __str__(self):

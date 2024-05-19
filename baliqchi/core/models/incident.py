@@ -18,3 +18,4 @@ class Incident(ExportModelOperationsMixin('incident'), BaseModel):
         null=True,
     )
     attack_type = models.CharField(max_length=255, choices=ATTACKS, default=None)
+    acknowledged = models.BooleanField(default=False)

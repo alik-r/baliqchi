@@ -10,4 +10,4 @@ route:
 receivers:
 - name: 'webhook'
   webhook_configs:
-  - url: 'http://web:8000/test/alerts/webhook/'
+  - url: 'http://web:8000/alerts/webhook/'

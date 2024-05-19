@@ -7,5 +7,5 @@ urlpatterns = [
     path("phishing-choices/", PhishingChoicesAPIView.as_view(), name="phishing-choices"),
     path("phishing-page/<str:url>/u", PhishingPageAPIView.as_view(), name="phishing_page"),
     path("incident-callback/", views.incident_callback, name="incident-callback"),
-    path("alerts/webhook/", views.alertmanager_webhook, name="alertmanager-webhook"),
+    path("alerts/webhook/", views.webhook_receiver, name="alertmanager-webhook"),
 ]
