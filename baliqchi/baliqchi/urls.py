@@ -37,6 +37,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("attacks.phishing.urls")),
     path("", include('django_prometheus.urls')),
+    path("", include("core.urls")),
 ]
 
 if settings.DEBUG:
