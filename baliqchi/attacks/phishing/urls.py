@@ -3,7 +3,6 @@ from attacks.phishing.api import *
 from attacks.phishing import views
 
 urlpatterns = [
-    path("test/", test_view, name="test-view"),
     path("make-attack/", AttackAPIView.as_view(), name="make-attack"),
     path("phishing-choices/", PhishingChoicesAPIView.as_view(), name="phishing-choices"),
     path("phishing-page/<str:url>/u", PhishingPageAPIView.as_view(), name="phishing_page"),

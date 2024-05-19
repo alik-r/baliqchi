@@ -6,6 +6,7 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
+
 @csrf_exempt
 def incident_callback(request):
     if request.method == 'POST':
@@ -15,6 +16,7 @@ def incident_callback(request):
         logger.info(f"Incident recorded: {incident_str}")
         return JsonResponse({'status': 'Incident recorded.'}, status=200)
     return JsonResponse({'error': 'Invalid request method'}, status=405)
+
 
 @csrf_exempt
 def alertmanager_webhook(request):
